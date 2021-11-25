@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Open_Local_Network_Operation_Centre</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pages\Dictionary.html" />
+    <None Remove="Pages\Index.html" />
+    <None Remove="Pages\ThemedTraff_ic.html" />
+    <None Remove="Pages\Traffic.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\Dictionary.html" />
+    <EmbeddedResource Include="Pages\Index.html" />
+    <EmbeddedResource Include="Pages\ThemedTraff_ic.html" />
+    <EmbeddedResource Include="Pages\Traffic.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>

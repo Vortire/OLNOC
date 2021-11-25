@@ -1,0 +1,4 @@
+Replace_this_line_with_your_NFO_Email
+Replace_this_line_with_your_NFO_Password
+Replace_this_line_with_your_Service_Name
+Replace_this_line_with_your_Service_Type

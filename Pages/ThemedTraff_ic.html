@@ -1,0 +1,175 @@
+﻿<html>
+<!--
+    This page is an embedded resource within the OLNOC executable.
+    This page is stored locally but fonts and CSS are loaded from external sources.
+    !-->
+<head>
+    <title>OLNOC (%service%) (%username%)</title>
+    <meta name="viewport"
+          content="width=device-width,
+                       initial-scale=1" />
+    <meta http-equiv="refresh" content="60;URL='themedtraffic.html'" />
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Barlow&family=M+PLUS+1&display=swap');
+
+        .container {
+            width: 100%;
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .centervert {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .themeddiv {
+            background-color: #000000;
+        }
+
+        body {
+            /*
+                Want a black theme? Remove this comment but leave the css styling
+            background-color: #000000;
+            color: fff;
+            */
+            zoom: 135%;
+            font-family: 'M PLUS 1', sans-serif;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+        }
+    </style>
+    <script>
+    function startTimer(duration, display) {
+            var timer = duration,
+                minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = minutes + ":" + seconds;
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+        window.onload = function () {
+            var oneMinute = 60 * 1,
+                display = document.querySelector('#time');
+            startTimer(oneMinute, display);
+        };</script>
+</head>
+<body class="text-danger themeddiv">
+    <center>
+        <div class="container">
+            <div class="container">
+                <header class="pb-3 mb-4 border-bottom py-4">
+                    <span class="fs-3">
+                        GMT:%gmt% — <strong><span id="time">01:00</span></strong> — EST:%est%
+                    </span>
+                </header>
+                <!--
+
+                Remove album and replace with this for a portrait look.
+                    <div class="h-100 p-5 bg-black rounded-3">
+                        <div class="container-fluid py-5">
+                            <h1 class="display-5 fw-bold">Network Intensity</h1>
+
+                            <div class="container-fluid py-5">
+                                <header class="pb-3 mb-4 border-bottom">
+                                    <span class="fs-4">
+                                        <strong>Hourly</strong> traffic that updates every 30 seconds
+                                    </span>
+                                </header>
+                                <img width="100%" src="30secondsample.png">
+                            </div>
+                            <div class="container-fluid py-5">
+                                <header class="pb-3 mb-4 border-bottom">
+                                    <span class="fs-4">
+                                        <strong>Daily</strong> traffic that updates every 5 minutes
+                                    </span>
+                                </header>
+                                <img width="100%" src="5minutesample.png">
+                            </div>
+                            <div class="container-fluid py-5">
+                                <header class="pb-3 mb-4 border-bottom">
+                                    <span class="fs-4">
+                                        <strong>Weekly</strong> traffic that updates every 30 minutes
+                                    </span>
+                                </header>
+                                <img width="100%" src="30minutesample.png">
+                            </div>
+                            <div class="container-fluid py-5">
+                                <header class="pb-3 mb-4 border-bottom">
+                                    <span class="fs-4">
+                                        <strong>Monthly</strong> traffic that updates every 2 hours
+                                    </span>
+                                </header>
+                                <img width="100%" src="2hoursample.png">
+                            </div>
+                        </div>
+                    </div>
+                !-->
+            </div>
+
+
+            <div class="album centervert">
+                <div class="container">
+
+                    <div class="row row-cols-1 row-cols-md-2 g-2">
+
+                        <div class="col">
+                            <div class="card-body themeddiv">
+                                <span class="fs-5">
+                                    <strong>Hourly</strong> traffic that updates every 30 seconds
+                                </span>
+                                <br><br>
+                                <img width="100%" src="30secondsample.png">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card-body themeddiv">
+                                <span class="fs-5">
+                                    <strong>Daily</strong> traffic that updates every 5 minutes
+                                </span>
+                                <br><br>
+                                <img width="100%" src="5minutesample.png">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card-body themeddiv">
+                                <span class="fs-5">
+                                    <strong>Weekly</strong> traffic that updates every 30 minutes
+                                </span>
+                                <br><br>
+                                <img width="100%" src="30minutesample.png">
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card-body themeddiv">
+                                <span class="fs-5">
+                                    <strong>Monthly</strong> traffic that updates every 2 hours
+                                </span>
+                                <br><br>
+                                <img width="100%" src="2hoursample.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
